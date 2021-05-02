@@ -1,0 +1,56 @@
+html {
+  font-size: 100%;
+}
+
+/* Formatting text & layout */
+.gameplay {
+  width: 50vw;
+  padding: 2%;
+  margin: 0 auto;
+  background-color: lightblue;
+  font-size: 1.5em;
+}
+
+.description {
+  font-family: Candara, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.5rem 0;
+  margin-top: 20vh;
+}
+
+.comment {
+  height: 1em;
+  margin: 1.4em 0;
+}
+
+/* Buttons & Input */
+input,
+button {
+  font: 1.5rem serif;
+  padding: 0.3em 0.5em;
+  margin: 0 0.3em;
+  border-radius: 0.3em;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+input[type='text'] {
+  margin-left: 1em;
+}
+
+/* Guess squares */
+.previous-guess span {
+  padding: 0.2em 0.4em;
+  margin-left: 0.2em;
+}
+
+.previous-guess .right {
+  background-color: lime;
+}
+
+.previous-guess .wrong {
+  background-color: tomato;
+}

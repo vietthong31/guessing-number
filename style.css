@@ -2,55 +2,74 @@ html {
   font-size: 100%;
 }
 
-/* Formatting text & layout */
-.gameplay {
-  width: 50vw;
-  padding: 2%;
-  margin: 0 auto;
+/* Layout */
+.game-container {
+  display: flex;
+  justify-content: center;
+  /* background-color: coral; */
+  gap: 10px;
+}
+
+.item1,
+.item2 {
   background-color: lightblue;
+  margin: 10px 0;
+  height: 200px;
   font-size: 1.5em;
 }
 
+.item1 {
+  width: 350px;
+  padding: 20px;
+}
+
+.item2 {
+  width: 350px;
+  padding: 20px;
+}
+
+input {
+  width: 85%;
+  padding: 0.5rem;
+  position: relative;
+  top: 20px;
+  left: 18px;
+}
+
+button {
+  width: 40%;
+  padding: 0.5rem;
+  position: relative;
+  top: 3rem;
+  left: 1.5rem;
+}
+
+/* Formatting text */
 .description {
-  font-family: Candara, sans-serif;
-  font-size: 2rem;
+  font-size: 2em;
   text-align: center;
-  margin: 0.5rem 0;
-  margin-top: 20vh;
 }
 
-.comment {
-  height: 1em;
-  margin: 1.4em 0;
-}
-
-/* Buttons & Input */
 input,
 button {
-  font: 1.5rem serif;
-  padding: 0.3em 0.5em;
-  margin: 0 0.3em;
-  border-radius: 0.3em;
+  font-size: inherit;
 }
 
-button:active {
-  transform: scale(0.9);
+.wrong,
+.right {
+  margin: 0 0.2rem;
+  padding: 0.2rem;
 }
 
-input[type='text'] {
-  margin-left: 1em;
+.wrong {
+  background-color: tomato;
 }
 
-/* Guess squares */
-.previous-guess span {
-  padding: 0.2em 0.4em;
-  margin-left: 0.2em;
-}
-
-.previous-guess .right {
+.right {
   background-color: lime;
 }
 
-.previous-guess .wrong {
-  background-color: tomato;
+button:disabled,
+input:disabled {
+  background-color: #7b7979;
 }

@@ -2,20 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guessing Number</title>
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <p class="description">Đoán một số ngẫu nhiên từ 1 đến 100 (10 lượt chơi).</p>
-    <div class="gameplay">
-      <div>
-        <label for="guess-field">Nhập số:</label>
-        <input class="guess-field" type="text" required />
-        <button class="guess-submit">&#x1F5F8;</button>
-        <button class="play-again">&#x2B6E;</button>
+    <p class="description">Đoán một số ngẫu nhiên từ 1 đến 100 (10 lượt chơi)</p>
+    <div class="game-container">
+      <div class="item1">
+        <input class="guess-field" type="text" placeholder="Nhập số" />
+        <button class="guess-submit">Đoán &#x1F5F8;</button>
+        <button class="play-again">Chơi lại &#x2B6E;</button>
       </div>
-      <p class="previous-guess">Các số đã đoán:</p>
-      <p class="comment"></p>
+      <div class="item2">
+        <p>Số đã đoán:</p>
+        <p class="previous-guess"></p>
+        <p class="comment"></p>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

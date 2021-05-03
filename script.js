@@ -6,7 +6,7 @@ const field = document.querySelector("input[type='text']");
 const comment = document.querySelector('.comment');
 var count = 0;
 
-playBtn.style.visibility = 'collapse';
+playBtn.disabled = true;
 
 submitBtn.onclick = checkNumber;
 playBtn.onclick = reset;
@@ -17,7 +17,7 @@ function checkNumber() {
   if (guess === randomNumber) {
     submitBtn.disabled = true;
     field.disabled = true;
-    playBtn.style.visibility = 'visible';
+    playBtn.disabled = false;
     previousGuess.insertAdjacentHTML('beforeend', "<span class='right'>" + guess + '</span>');
     comment.textContent = 'CHÍNH XÁC!';
   } else {
@@ -33,20 +33,18 @@ function checkNumber() {
   if (count == 10) {
     submitBtn.disabled = true;
     field.disabled = true;
-    playBtn.style.visibility = 'visible';
+    playBtn.disabled = false;
   }
 }
 
 function reset() {
-  // Mở field & submit
+  // Mở field & submit; disable reset
   submitBtn.disabled = false;
   field.disabled = false;
-
-  // Ẩn "Chơi lại"
-  playBtn.style.visibility = 'collapse';
+  playBtn.disabled = true;
 
   // Xoá các content
-  previousGuess.innerText = 'Các số đã đoán: ';
+  previousGuess.innerText = '';
   comment.textContent = '';
 
   field.focus();
